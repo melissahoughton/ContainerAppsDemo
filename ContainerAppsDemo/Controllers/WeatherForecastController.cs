@@ -12,7 +12,7 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
+    [HttpGet(Name = "WeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
         var temp = 0; 
