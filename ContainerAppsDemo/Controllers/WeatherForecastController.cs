@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ContainerAppsDemo.Controllers;
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class WeatherForecastController : ControllerBase
 {
     private readonly ILogger<WeatherForecastController> _logger;
