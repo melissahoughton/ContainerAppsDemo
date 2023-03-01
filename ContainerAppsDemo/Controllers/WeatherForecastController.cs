@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace ContainerAppsDemo.Controllers;
 [ApiController]
@@ -19,7 +20,7 @@ public class WeatherForecastController : ControllerBase
        
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
-            Date = DateTime.Now.AddDays(index),
+            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             TemperatureC = temp = Random.Shared.Next(-10, 35),
             Summary = GetSummary(temp)
         })
